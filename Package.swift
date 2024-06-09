@@ -4,20 +4,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "DSNetwork",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "DSNetwork",
-            targets: ["DSNetwork"]),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "DSNetwork"),
-        .testTarget(
-            name: "DSNetworkTests",
-            dependencies: ["DSNetwork"]),
-    ]
+	name: "DSNetwork",
+	products: [
+		.library(
+			name: "DSNetwork",
+			targets: ["DSNetwork"]),
+	],
+	targets: [
+		.target(
+			name: "DSNetwork"),
+		.testTarget(
+			name: "DSNetworkTests",
+			dependencies: ["DSNetwork"]),
+	]
 )
