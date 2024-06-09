@@ -14,7 +14,10 @@ let DSNetwork: Target = .target(
 	deploymentTargets: .iOS("14.0"),
 	infoPlist: "DSNetwork/Configs/Info.plist",
 	sources: "DSNetwork/Sources/**",
-	resources: "DSNetwork/Resources/**",
+	resources: "DSNetwork/Resources/**", 
+	dependencies: [
+		.external(name: "swift-http-types")
+	],
 	settings: .settings(
 		base: baseSettings,
 		configurations: [.debug(name: .debug), .release(name: .release)]

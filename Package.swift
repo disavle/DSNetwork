@@ -8,7 +8,7 @@ import ProjectDescription
 
 let packageSettings = PackageSettings(
 	productTypes: [
-		"Alamofire": .framework,
+		"swift-http-types": .framework,
 	]
 )
 
@@ -22,13 +22,17 @@ let package = Package(
 			targets: ["DSNetwork"]),
 	], 
 	dependencies: [
-		.package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0")
+		.package(url: "https://github.com/apple/swift-http-types", from: "1.1.0")
 	],
 	targets: [
 		.target(
-			name: "DSNetwork"),
+			name: "DSNetwork",
+			path: "DSNetwork/Sources"
+		),
 		.testTarget(
 			name: "DSNetworkTests",
-			dependencies: ["DSNetwork"]),
+			dependencies: ["DSNetwork"],
+			path: "DSNetworkTests/Sources"
+		),
 	]
 )
