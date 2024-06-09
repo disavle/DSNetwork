@@ -16,7 +16,7 @@ let DSNetwork: Target = .target(
 	sources: "DSNetwork/Sources/**",
 	resources: "DSNetwork/Resources/**", 
 	dependencies: [
-		.external(name: "swift-http-types")
+		.external(name: "HTTPTypesFoundation")
 	],
 	settings: .settings(
 		base: baseSettings,

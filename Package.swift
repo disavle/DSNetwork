@@ -3,17 +3,6 @@
 
 import PackageDescription
 
-#if TUIST
-import ProjectDescription
-
-let packageSettings = PackageSettings(
-	productTypes: [
-		"swift-http-types": .framework,
-	]
-)
-
-#endif
-
 let package = Package(
 	name: "DSNetwork",
 	products: [
