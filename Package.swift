@@ -9,12 +9,19 @@ let package = Package(
 		.library(
 			name: "DSNetwork",
 			targets: ["DSNetwork"]),
+	], 
+	dependencies: [
+		.package(url: "https://github.com/apple/swift-http-types", from: "1.1.0")
 	],
 	targets: [
 		.target(
-			name: "DSNetwork"),
+			name: "DSNetwork",
+			path: "DSNetwork/Sources"
+		),
 		.testTarget(
 			name: "DSNetworkTests",
-			dependencies: ["DSNetwork"]),
+			dependencies: ["DSNetwork"],
+			path: "DSNetworkTests/Sources"
+		),
 	]
 )
